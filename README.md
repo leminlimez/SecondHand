@@ -7,6 +7,11 @@ No information will leave your device. It is only to keep the app open.
 
 **Info:** Your battery life may be impacted when using seconds. Battery drain is negligible with Date though, because it only updates every hour.
 
-# Credits
+I am not responsible for damage to your device.
+
+## Screenshots
+<img src="/Images/MainPage.PNG" width="300" height="650"/>
+
+## Credits
 - Avangelista and [StatusMagic](https://github.com/Avangelista/StatusMagic) for status bar method.
 - [Evyrest](https://github.com/sourcelocation/Evyrest) for background updating.
