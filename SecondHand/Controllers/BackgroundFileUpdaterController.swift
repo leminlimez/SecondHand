@@ -11,6 +11,7 @@ import Foundation
 import SwiftUI
 import notify
 import SystemConfiguration
+import Combine
 
 struct BackgroundOption: Identifiable {
     var id = UUID()
@@ -21,11 +22,29 @@ struct BackgroundOption: Identifiable {
 
 class BackgroundFileUpdaterController: ObservableObject {
     static let shared = BackgroundFileUpdaterController()
+    public var time = 3600.0
+    public var timer: Timer? = nil
     
     func setup() {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        startTimer()
+    }
+    
+    func startTimer() {
+        guard timer == nil else { return }
+        
+        timer = Timer.scheduledTimer(withTimeInterval: time, repeats: true) { timer in
             BackgroundFileUpdaterController.shared.updateTime()
         }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    func restartTimer() {
+        stopTimer()
+        startTimer()
     }
     
     func stop() {
@@ -35,14 +54,13 @@ class BackgroundFileUpdaterController: ObservableObject {
     func updateTime() {
         Task {
             // apply to the timer
-            if UserDefaults.standard.bool(forKey: "IsEnabled") == true {
-                let calendar = Calendar.current
-                let date = Date()
-                let hour = calendar.component(.hour, from: date)
-                let minutes = calendar.component(.minute, from: date)
-                let seconds = calendar.component(.second, from: date)
-                
-                StatusManager.sharedInstance().setTime("\(hour):\(minutes)\(seconds)")
+            if UserDefaults.standard.bool(forKey: "TimeIsEnabled") == true {
+                setTimeSeconds()
+            }
+            
+            // apply to breadcrumb
+            if UserDefaults.standard.bool(forKey: "DateIsEnabled") == true {
+                setCrumbDate()
             }
         }
     }

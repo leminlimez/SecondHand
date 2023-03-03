@@ -24,6 +24,8 @@
 		6F24809A29B1A55700F2DAA2 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24809629B1A55700F2DAA2 /* helpers.m */; };
 		6F24809B29B1A55700F2DAA2 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24809729B1A55700F2DAA2 /* grant_full_disk_access.m */; };
 		6F24809F29B1A7CA00F2DAA2 /* SecondHand.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 6F24809E29B1A7C900F2DAA2 /* SecondHand.entitlements */; };
+		6F2480A329B2812500F2DAA2 /* Alert++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2480A229B2812500F2DAA2 /* Alert++.swift */; };
+		6F2480A529B2813600F2DAA2 /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2480A429B2813600F2DAA2 /* String++.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,9 @@
 		6F24809729B1A55700F2DAA2 /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = grant_full_disk_access.m; sourceTree = "<group>"; };
 		6F24809829B1A55700F2DAA2 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
 		6F24809E29B1A7C900F2DAA2 /* SecondHand.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SecondHand.entitlements; sourceTree = "<group>"; };
+		6F2480A029B2298200F2DAA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6F2480A229B2812500F2DAA2 /* Alert++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert++.swift"; sourceTree = "<group>"; };
+		6F2480A429B2813600F2DAA2 /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +92,13 @@
 		6F24806829B1A0B000F2DAA2 /* SecondHand */ = {
 			isa = PBXGroup;
 			children = (
-				6F24809E29B1A7C900F2DAA2 /* SecondHand.entitlements */,
-				6F24807F29B1A29000F2DAA2 /* SecondHand-Bridging-Header.h */,
+				6F24807729B1A0E900F2DAA2 /* Controllers */,
+				6F2480A129B2810300F2DAA2 /* Extensions */,
 				6F24809229B1A52B00F2DAA2 /* MDC */,
 				6F24807E29B1A28300F2DAA2 /* StatusMagic */,
-				6F24807729B1A0E900F2DAA2 /* Controllers */,
+				6F2480A029B2298200F2DAA2 /* Info.plist */,
+				6F24809E29B1A7C900F2DAA2 /* SecondHand.entitlements */,
+				6F24807F29B1A29000F2DAA2 /* SecondHand-Bridging-Header.h */,
 				6F24806929B1A0B000F2DAA2 /* SecondHandApp.swift */,
 				6F24806B29B1A0B000F2DAA2 /* ContentView.swift */,
 				6F24806D29B1A0B100F2DAA2 /* Assets.xcassets */,
@@ -148,6 +155,15 @@
 				6F24809429B1A55700F2DAA2 /* vm_unaligned_copy_switch_race.h */,
 			);
 			path = MDC;
+			sourceTree = "<group>";
+		};
+		6F2480A129B2810300F2DAA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6F2480A229B2812500F2DAA2 /* Alert++.swift */,
+				6F2480A429B2813600F2DAA2 /* String++.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,10 +244,12 @@
 				6F24808C29B1A29100F2DAA2 /* StatusManager.m in Sources */,
 				6F24807C29B1A11E00F2DAA2 /* BackgroundFileUpdaterController.swift in Sources */,
 				6F24808F29B1A29100F2DAA2 /* StatusSetter16.m in Sources */,
+				6F2480A529B2813600F2DAA2 /* String++.swift in Sources */,
 				6F24809A29B1A55700F2DAA2 /* helpers.m in Sources */,
 				6F24808E29B1A29100F2DAA2 /* StatusSetter15.m in Sources */,
 				6F24808D29B1A29100F2DAA2 /* StatusSetter14.m in Sources */,
 				6F24807D29B1A11E00F2DAA2 /* LocationManager.swift in Sources */,
+				6F2480A329B2812500F2DAA2 /* Alert++.swift in Sources */,
 				6F24809B29B1A55700F2DAA2 /* grant_full_disk_access.m in Sources */,
 				6F24808B29B1A29100F2DAA2 /* StatusSetter16_1.m in Sources */,
 				6F24807B29B1A11E00F2DAA2 /* ApplicationMonitor.swift in Sources */,
@@ -370,7 +388,10 @@
 				DEVELOPMENT_TEAM = 2P4CP47H76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SecondHand/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Second Hand";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "SecondHand runs in background to keep the time changing. Usually iOS kills such apps after a period of time. But Cowabunga tricks iOS by requesting location data thus allowiing much longer sessions. Data is never stored anywhere, only fetched.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "SecondHand runs in background to keep the time changing. Usually iOS kills such apps after a period of time. But Cowabunga tricks iOS by requesting location data thus allowiing much longer sessions. Data is never stored anywhere, only fetched.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,7 +428,10 @@
 				DEVELOPMENT_TEAM = 2P4CP47H76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SecondHand/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Second Hand";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "SecondHand runs in background to keep the time changing. Usually iOS kills such apps after a period of time. But Cowabunga tricks iOS by requesting location data thus allowiing much longer sessions. Data is never stored anywhere, only fetched.";
+				INFOPLIST_KEY_NSLocationUsageDescription = "SecondHand runs in background to keep the time changing. Usually iOS kills such apps after a period of time. But Cowabunga tricks iOS by requesting location data thus allowiing much longer sessions. Data is never stored anywhere, only fetched.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
