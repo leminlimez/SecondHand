@@ -8,8 +8,8 @@ WORKING_LOCATION="$(pwd)"
 APPLICATION_NAME=SecondHand
 CONFIGURATION=Debug
 
-if [ -e "$APPLICATION_NAME.ipa" ]; then
-rm "$APPLICATION_NAME.ipa"
+if [ -e "$APPLICATION_NAME.tipa" ]; then
+rm "$APPLICATION_NAME.tipa"
 fi
 if [ ! -d "build" ]; then
 mkdir build
@@ -46,10 +46,10 @@ ldid -S"$WORKING_LOCATION/$APPLICATION_NAME/$APPLICATION_NAME.entitlements" "$TA
 rm -rf Payload
 mkdir Payload
 cp -r $APPLICATION_NAME.app Payload/$APPLICATION_NAME.app
-zip -vr "$APPLICATION_NAME.ipa" Payload
+zip -vr "$APPLICATION_NAME.tipa" Payload
 rm -rf $APPLICATION_NAME.app
 rm -rf Payload
 rm -rf DerivedData
-mv "$APPLICATION_NAME.ipa" "../$APPLICATION_NAME.ipa"
+mv "$APPLICATION_NAME.tipa" "../$APPLICATION_NAME.tipa"
 cd ..
 rm -rf build
