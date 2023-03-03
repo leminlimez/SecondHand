@@ -11,6 +11,19 @@
 		6F24806C29B1A0B000F2DAA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24806B29B1A0B000F2DAA2 /* ContentView.swift */; };
 		6F24806E29B1A0B100F2DAA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24806D29B1A0B100F2DAA2 /* Assets.xcassets */; };
 		6F24807129B1A0B100F2DAA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F24807029B1A0B100F2DAA2 /* Preview Assets.xcassets */; };
+		6F24807B29B1A11E00F2DAA2 /* ApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24807829B1A11E00F2DAA2 /* ApplicationMonitor.swift */; };
+		6F24807C29B1A11E00F2DAA2 /* BackgroundFileUpdaterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24807929B1A11E00F2DAA2 /* BackgroundFileUpdaterController.swift */; };
+		6F24807D29B1A11E00F2DAA2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24807A29B1A11E00F2DAA2 /* LocationManager.swift */; };
+		6F24808B29B1A29100F2DAA2 /* StatusSetter16_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24808029B1A29100F2DAA2 /* StatusSetter16_1.m */; };
+		6F24808C29B1A29100F2DAA2 /* StatusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24808129B1A29100F2DAA2 /* StatusManager.m */; };
+		6F24808D29B1A29100F2DAA2 /* StatusSetter14.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24808329B1A29100F2DAA2 /* StatusSetter14.m */; };
+		6F24808E29B1A29100F2DAA2 /* StatusSetter15.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24808429B1A29100F2DAA2 /* StatusSetter15.m */; };
+		6F24808F29B1A29100F2DAA2 /* StatusSetter16.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24808829B1A29100F2DAA2 /* StatusSetter16.m */; };
+		6F24809129B1A41700F2DAA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24809029B1A41700F2DAA2 /* AppDelegate.swift */; };
+		6F24809929B1A55700F2DAA2 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F24809329B1A55700F2DAA2 /* vm_unaligned_copy_switch_race.c */; };
+		6F24809A29B1A55700F2DAA2 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24809629B1A55700F2DAA2 /* helpers.m */; };
+		6F24809B29B1A55700F2DAA2 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F24809729B1A55700F2DAA2 /* grant_full_disk_access.m */; };
+		6F24809F29B1A7CA00F2DAA2 /* SecondHand.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 6F24809E29B1A7C900F2DAA2 /* SecondHand.entitlements */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,29 @@
 		6F24806B29B1A0B000F2DAA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6F24806D29B1A0B100F2DAA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F24807029B1A0B100F2DAA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6F24807829B1A11E00F2DAA2 /* ApplicationMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationMonitor.swift; sourceTree = "<group>"; };
+		6F24807929B1A11E00F2DAA2 /* BackgroundFileUpdaterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundFileUpdaterController.swift; sourceTree = "<group>"; };
+		6F24807A29B1A11E00F2DAA2 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		6F24807F29B1A29000F2DAA2 /* SecondHand-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecondHand-Bridging-Header.h"; sourceTree = "<group>"; };
+		6F24808029B1A29100F2DAA2 /* StatusSetter16_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusSetter16_1.m; sourceTree = "<group>"; };
+		6F24808129B1A29100F2DAA2 /* StatusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusManager.m; sourceTree = "<group>"; };
+		6F24808229B1A29100F2DAA2 /* StatusSetter14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusSetter14.h; sourceTree = "<group>"; };
+		6F24808329B1A29100F2DAA2 /* StatusSetter14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusSetter14.m; sourceTree = "<group>"; };
+		6F24808429B1A29100F2DAA2 /* StatusSetter15.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusSetter15.m; sourceTree = "<group>"; };
+		6F24808529B1A29100F2DAA2 /* StatusSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusSetter.h; sourceTree = "<group>"; };
+		6F24808629B1A29100F2DAA2 /* StatusSetter16_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusSetter16_1.h; sourceTree = "<group>"; };
+		6F24808729B1A29100F2DAA2 /* StatusSetter16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusSetter16.h; sourceTree = "<group>"; };
+		6F24808829B1A29100F2DAA2 /* StatusSetter16.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusSetter16.m; sourceTree = "<group>"; };
+		6F24808929B1A29100F2DAA2 /* StatusSetter15.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusSetter15.h; sourceTree = "<group>"; };
+		6F24808A29B1A29100F2DAA2 /* StatusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusManager.h; sourceTree = "<group>"; };
+		6F24809029B1A41700F2DAA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F24809329B1A55700F2DAA2 /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
+		6F24809429B1A55700F2DAA2 /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
+		6F24809529B1A55700F2DAA2 /* grant_full_disk_access.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = grant_full_disk_access.h; sourceTree = "<group>"; };
+		6F24809629B1A55700F2DAA2 /* helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpers.m; sourceTree = "<group>"; };
+		6F24809729B1A55700F2DAA2 /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = grant_full_disk_access.m; sourceTree = "<group>"; };
+		6F24809829B1A55700F2DAA2 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		6F24809E29B1A7C900F2DAA2 /* SecondHand.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SecondHand.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +87,16 @@
 		6F24806829B1A0B000F2DAA2 /* SecondHand */ = {
 			isa = PBXGroup;
 			children = (
+				6F24809E29B1A7C900F2DAA2 /* SecondHand.entitlements */,
+				6F24807F29B1A29000F2DAA2 /* SecondHand-Bridging-Header.h */,
+				6F24809229B1A52B00F2DAA2 /* MDC */,
+				6F24807E29B1A28300F2DAA2 /* StatusMagic */,
+				6F24807729B1A0E900F2DAA2 /* Controllers */,
 				6F24806929B1A0B000F2DAA2 /* SecondHandApp.swift */,
 				6F24806B29B1A0B000F2DAA2 /* ContentView.swift */,
 				6F24806D29B1A0B100F2DAA2 /* Assets.xcassets */,
 				6F24806F29B1A0B100F2DAA2 /* Preview Content */,
+				6F24809029B1A41700F2DAA2 /* AppDelegate.swift */,
 			);
 			path = SecondHand;
 			sourceTree = "<group>";
@@ -65,6 +107,47 @@
 				6F24807029B1A0B100F2DAA2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6F24807729B1A0E900F2DAA2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F24807829B1A11E00F2DAA2 /* ApplicationMonitor.swift */,
+				6F24807929B1A11E00F2DAA2 /* BackgroundFileUpdaterController.swift */,
+				6F24807A29B1A11E00F2DAA2 /* LocationManager.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6F24807E29B1A28300F2DAA2 /* StatusMagic */ = {
+			isa = PBXGroup;
+			children = (
+				6F24808A29B1A29100F2DAA2 /* StatusManager.h */,
+				6F24808129B1A29100F2DAA2 /* StatusManager.m */,
+				6F24808529B1A29100F2DAA2 /* StatusSetter.h */,
+				6F24808229B1A29100F2DAA2 /* StatusSetter14.h */,
+				6F24808329B1A29100F2DAA2 /* StatusSetter14.m */,
+				6F24808929B1A29100F2DAA2 /* StatusSetter15.h */,
+				6F24808429B1A29100F2DAA2 /* StatusSetter15.m */,
+				6F24808629B1A29100F2DAA2 /* StatusSetter16_1.h */,
+				6F24808029B1A29100F2DAA2 /* StatusSetter16_1.m */,
+				6F24808729B1A29100F2DAA2 /* StatusSetter16.h */,
+				6F24808829B1A29100F2DAA2 /* StatusSetter16.m */,
+			);
+			path = StatusMagic;
+			sourceTree = "<group>";
+		};
+		6F24809229B1A52B00F2DAA2 /* MDC */ = {
+			isa = PBXGroup;
+			children = (
+				6F24809529B1A55700F2DAA2 /* grant_full_disk_access.h */,
+				6F24809729B1A55700F2DAA2 /* grant_full_disk_access.m */,
+				6F24809829B1A55700F2DAA2 /* helpers.h */,
+				6F24809629B1A55700F2DAA2 /* helpers.m */,
+				6F24809329B1A55700F2DAA2 /* vm_unaligned_copy_switch_race.c */,
+				6F24809429B1A55700F2DAA2 /* vm_unaligned_copy_switch_race.h */,
+			);
+			path = MDC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +182,7 @@
 				TargetAttributes = {
 					6F24806529B1A0B000F2DAA2 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -125,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F24809F29B1A7CA00F2DAA2 /* SecondHand.entitlements in Resources */,
 				6F24807129B1A0B100F2DAA2 /* Preview Assets.xcassets in Resources */,
 				6F24806E29B1A0B100F2DAA2 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +222,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F24809129B1A41700F2DAA2 /* AppDelegate.swift in Sources */,
 				6F24806C29B1A0B000F2DAA2 /* ContentView.swift in Sources */,
+				6F24809929B1A55700F2DAA2 /* vm_unaligned_copy_switch_race.c in Sources */,
+				6F24808C29B1A29100F2DAA2 /* StatusManager.m in Sources */,
+				6F24807C29B1A11E00F2DAA2 /* BackgroundFileUpdaterController.swift in Sources */,
+				6F24808F29B1A29100F2DAA2 /* StatusSetter16.m in Sources */,
+				6F24809A29B1A55700F2DAA2 /* helpers.m in Sources */,
+				6F24808E29B1A29100F2DAA2 /* StatusSetter15.m in Sources */,
+				6F24808D29B1A29100F2DAA2 /* StatusSetter14.m in Sources */,
+				6F24807D29B1A11E00F2DAA2 /* LocationManager.swift in Sources */,
+				6F24809B29B1A55700F2DAA2 /* grant_full_disk_access.m in Sources */,
+				6F24808B29B1A29100F2DAA2 /* StatusSetter16_1.m in Sources */,
+				6F24807B29B1A11E00F2DAA2 /* ApplicationMonitor.swift in Sources */,
 				6F24806A29B1A0B000F2DAA2 /* SecondHandApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,6 +298,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "SecondHand/SecondHand-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -254,6 +352,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "SecondHand/SecondHand-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -264,17 +363,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SecondHand/Preview Content\"";
 				DEVELOPMENT_TEAM = 2P4CP47H76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Second Hand";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,7 +384,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leemin.SecondHand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SecondHand/SecondHand-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,17 +400,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SecondHand/Preview Content\"";
 				DEVELOPMENT_TEAM = 2P4CP47H76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Second Hand";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +421,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leemin.SecondHand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SecondHand/SecondHand-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

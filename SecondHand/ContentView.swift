@@ -10,10 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button(action: {
+                UserDefaults.standard.set(true, forKey: "IsEnabled")
+            }) {
+                Text("Enable")
+            }
+            
+            Button(action: {
+                UserDefaults.standard.set(false, forKey: "IsEnabled")
+            }) {
+                Text("Disable")
+            }
         }
         .padding()
     }
