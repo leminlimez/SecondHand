@@ -11,7 +11,7 @@ func setTimeSeconds() {
     let calendar = Calendar.current
     let date = Date()
     let hour = calendar.component(.hour, from: date)
-    var hourFinal = UserDefaults.standard.bool(forKey: "Time24Hour") ? hour : (hour%12 == 0 ? 12 : hour%12)
+    let hourFinal = UserDefaults.standard.bool(forKey: "Time24Hour") ? hour : (hour%12 == 0 ? 12 : hour%12)
     let minutes = calendar.component(.minute, from: date)
     let seconds = calendar.component(.second, from: date)
     
