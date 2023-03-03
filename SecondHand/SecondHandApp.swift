@@ -25,7 +25,7 @@ struct SecondHandApp: App {
             StatusManager.sharedInstance().setIsMDCMode(false)
     #else
         var supported = false
-        if #unavailable(iOS 15.5) {
+        if #unavailable(iOS 15.6.1) {
             supported = true
         }
         
