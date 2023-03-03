@@ -1,5 +1,5 @@
 # SecondHand
-Add seconds and date to status bar clock on TrollStore devices
+Add seconds and date to status bar clock on [TrollStore](https://github.com/opa334/TrollStore) devices
 Compatible with iOS 14.0-15.4.1
 
 In order for it to run in the background, you must set location services to **Always**, and you can enable notifications so that you can be notified when the app stops running.
@@ -15,3 +15,5 @@ I am not responsible for damage to your device.
 ## Credits
 - Avangelista and [StatusMagic](https://github.com/Avangelista/StatusMagic) for status bar method.
 - [Evyrest](https://github.com/sourcelocation/Evyrest) for background updating.
+- [grant_full_disk_access](https://gist.github.com/zhuowei/bc7a90bdc520556fda84d33e0583eb3e)
+- [Ian Beer](https://twitter.com/i41nbeer) for MacDirtyCow exploit code.
