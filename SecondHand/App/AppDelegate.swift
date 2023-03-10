@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UserDefaults.standard.set(DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: Locale.current)?.range(of: "a") == nil, forKey: "Time24Hour")
+        UserDefaults.standard.set("MM/dd", forKey: "DateFormat")
         ApplicationMonitor.shared.start()
         
         self.registerForNotifications()
