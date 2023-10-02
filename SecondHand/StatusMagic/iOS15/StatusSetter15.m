@@ -1,4 +1,4 @@
-#import "StatusSetter16.h"
+#import "StatusSetter15.h"
 #import "StatusManager.h"
 
 typedef NS_ENUM(int, StatusBarItem) {
@@ -44,9 +44,6 @@ typedef NS_ENUM(int, StatusBarItem) {
   VoiceControlStatusBarItem = 39,
   // 40
   // 41
-  // 42
-  // 43
-  Extra1StatusBarItem = 44,
 };
 
 typedef NS_ENUM(unsigned int, BatteryState) {
@@ -54,7 +51,7 @@ typedef NS_ENUM(unsigned int, BatteryState) {
 };
 
 typedef struct {
-  bool itemIsEnabled[45];
+  bool itemIsEnabled[44];
   char timeString[64];
   char shortTimeString[64];
   char dateString[256];
@@ -109,11 +106,10 @@ typedef struct {
   char primaryServiceBadgeString[100];
   char secondaryServiceBadgeString[100];
   char quietModeImage[256];
-  unsigned int extra1 : 1; // Unsure of actual size, but it's at least 1 byte. Since this is at the end of the struct, and we aren't modifying this part of the struct, it likely shouldn't matter that it's not the correct size.
 } StatusBarRawData;
 
 typedef struct {
-  bool overrideItemIsEnabled[45];
+  bool overrideItemIsEnabled[44];
   unsigned int overrideTimeString : 1;
   unsigned int overrideDateString : 1;
   unsigned int overrideGsmSignalStrengthRaw : 1;
@@ -149,7 +145,6 @@ typedef struct {
   unsigned int overridePrimaryServiceBadgeString : 1;
   unsigned int overrideSecondaryServiceBadgeString : 1;
   unsigned int overrideQuietModeImage : 1;
-  unsigned int overrideExtra1 : 1; // Not sure what this is, but there only seems to be one of them
   StatusBarRawData values;
 } StatusBarOverrideData;
 
@@ -176,9 +171,9 @@ typedef struct {
 
 @end
 
-@implementation StatusSetter16
+@implementation StatusSetter15
 
-// BELOW IS THE SAME IN iOS 15, 16, AND 16.1
+// BELOW IS THE SAME IN iOS 15, 16, 16.1, and 16.3
 
 - (void) applyChanges:(StatusBarOverrideData*)overrides {
     if (!StatusManager.sharedInstance.isMDCMode) {
@@ -381,8 +376,7 @@ typedef struct {
 
 - (bool) isWiFiHidden {
     StatusBarOverrideData *overrides = [self getOverrides];
-    return overrides->overrideItemIsEnabled[CellularDataNetworkStatusBarItem] == 1 &&
-        overrides->overrideItemIsEnabled[SecondaryCellularDataNetworkStatusBarItem] == 1;
+    return overrides->overrideItemIsEnabled[CellularDataNetworkStatusBarItem] == 1;
 }
 
 - (void) hideWiFi:(bool)hidden {
