@@ -40,20 +40,21 @@ struct SecondHandApp: App {
     #if targetEnvironment(simulator)
             StatusManager.sharedInstance().setIsMDCMode(false)
     #else
-        var supported = false
-        if #unavailable(iOS 15.6.1) {
-            supported = true
-        }
-        
-        if !supported {
-            UIApplication.shared.alert(title: "Not Supported", body: "This version of iOS is not supported. Please close the app.", withButton: false)
+        if #available(iOS 15.6.1, *) {
+            // check permissions
+            do {
+                try FileManager.default.contentsOfDirectory(atPath: "/var/mobile")
+                return
+            } catch {
+                UIApplication.shared.alert(title: "Not Supported", body: "This version of iOS is not supported. Please close the app.", withButton: false)
+            }
         } else {
-            getRootFS(needsTrollStore: true)
+            getRootFS()
         }
     #endif
     }
     
-    func getRootFS(needsTrollStore: Bool) {
+    func getRootFS() {
             do {
                 // Check if application is entitled
                 try FileManager.default.contentsOfDirectory(at: URL(fileURLWithPath: "/var/mobile"), includingPropertiesForKeys: nil)
@@ -63,18 +64,8 @@ struct SecondHandApp: App {
                     StatusManager.sharedInstance().setIsMDCMode(false)
                 }
             } catch {
-                if needsTrollStore {
-                    UIApplication.shared.alert(title: "Use TrollStore", body: "You must install this app with TrollStore for it to work. Please close the app.", withButton: false)
-                    return
-                }
-                // Use MacDirtyCOW to gain r/w
-                grant_full_disk_access() { error in
-                    if (error != nil) {
-                        UIApplication.shared.alert(body: "\(String(describing: error?.localizedDescription))\nPlease close the app and retry.", withButton: false)
-                        return
-                    }
-                    StatusManager.sharedInstance().setIsMDCMode(true)
-                }
+                UIApplication.shared.alert(title: "Use TrollStore", body: "You must install this app with TrollStore for it to work. Please close the app.", withButton: false)
+                return
             }
             
             let fm = FileManager.default
