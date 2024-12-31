@@ -27,7 +27,6 @@
 //#import <mach-o/arch.h>
 #import "StatusManager.h"
 #import "StatusSetter.h"
-#import "StatusSetter16_3.h"
 #import "StatusSetter16_1.h"
 #import "StatusSetter16.h"
 #import "StatusSetter15.h"
@@ -48,9 +47,7 @@
 
 - (id<StatusSetter>)setter {
     if (!_setter) {
-        if (@available(iOS 16.3, *)) {
-            _setter = [StatusSetter16_3 new];
-        } else if (@available(iOS 16.1, *)) {
+        if (@available(iOS 16.1, *)) {
             if ([[NSUserDefaults standardUserDefaults] boolForKey:@"UseAlternativeSetter"]) {
                 _setter = [StatusSetter16 new];
             } else {

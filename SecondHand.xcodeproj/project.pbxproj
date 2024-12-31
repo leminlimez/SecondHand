@@ -24,7 +24,6 @@
 		6F2480A329B2812500F2DAA2 /* Alert++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2480A229B2812500F2DAA2 /* Alert++.swift */; };
 		6F2480A529B2813600F2DAA2 /* String++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2480A429B2813600F2DAA2 /* String++.swift */; };
 		6F24811429BBEAB100F2DAA2 /* Bundle++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F24811329BBEAB100F2DAA2 /* Bundle++.swift */; };
-		6F6CAFBA2ACB556D00151C9B /* StatusSetter16_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6CAFB92ACB556D00151C9B /* StatusSetter16_3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,8 +53,6 @@
 		6F2480A229B2812500F2DAA2 /* Alert++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert++.swift"; sourceTree = "<group>"; };
 		6F2480A429B2813600F2DAA2 /* String++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++.swift"; sourceTree = "<group>"; };
 		6F24811329BBEAB100F2DAA2 /* Bundle++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle++.swift"; sourceTree = "<group>"; };
-		6F6CAFB82ACB556000151C9B /* StatusSetter16_3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusSetter16_3.h; sourceTree = "<group>"; };
-		6F6CAFB92ACB556D00151C9B /* StatusSetter16_3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusSetter16_3.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +125,6 @@
 				6F6CAFB62ACB550E00151C9B /* iOS15 */,
 				6F6CAFB52ACB550800151C9B /* iOS16 */,
 				6F6CAFB42ACB54FC00151C9B /* iOS16_1 */,
-				6F6CAFB32ACB54EE00151C9B /* iOS16_3 */,
 			);
 			path = StatusMagic;
 			sourceTree = "<group>";
@@ -159,15 +155,6 @@
 				6F24808329B1A29100F2DAA2 /* StatusSetter14.m */,
 			);
 			path = iOS14;
-			sourceTree = "<group>";
-		};
-		6F6CAFB32ACB54EE00151C9B /* iOS16_3 */ = {
-			isa = PBXGroup;
-			children = (
-				6F6CAFB82ACB556000151C9B /* StatusSetter16_3.h */,
-				6F6CAFB92ACB556D00151C9B /* StatusSetter16_3.m */,
-			);
-			path = iOS16_3;
 			sourceTree = "<group>";
 		};
 		6F6CAFB42ACB54FC00151C9B /* iOS16_1 */ = {
@@ -280,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F24809129B1A41700F2DAA2 /* AppDelegate.swift in Sources */,
-				6F6CAFBA2ACB556D00151C9B /* StatusSetter16_3.m in Sources */,
 				6F24806C29B1A0B000F2DAA2 /* ContentView.swift in Sources */,
 				6F24808C29B1A29100F2DAA2 /* StatusManager.m in Sources */,
 				6F24807C29B1A11E00F2DAA2 /* BackgroundFileUpdaterController.swift in Sources */,
@@ -442,7 +428,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leemin.SecondHand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -482,7 +468,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leemin.SecondHand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
