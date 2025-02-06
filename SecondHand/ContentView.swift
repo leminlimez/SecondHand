@@ -27,6 +27,7 @@ func setTimeSeconds() {
 func setCrumbDate() {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = UserDefaults.standard.string(forKey: "DateFormat") ?? "MM/dd"
+    dateFormatter.locale = Locale(identifier: Locale.preferredLanguages.first!)
     
     let newStr: String = dateFormatter.string(from: Date())
     
