@@ -10,8 +10,7 @@ No information will leave your device. It is only to keep the app open.
 I am not responsible for damage to your device.
 
 ## Screenshots
-<img src="/Images/MainPage.PNG" width="300" height="650"/>
-<img src="/Images/DateFormatOptions.PNG" width="300" height="650"/>
+<img src="/Images/MainPage.png" width="280" height=""/> <img src="/Images/DateFormatInput.png" width="280" height=""/>
 
 ## Credits
 - Avangelista and [StatusMagic](https://github.com/Avangelista/StatusMagic) for status bar method.
