@@ -43,36 +43,6 @@ struct ContentView: View {
     @State private var crumbTextEnabled: Bool = StatusManager.sharedInstance().isCrumbOverridden()
     @State private var dateFormat: String = UserDefaults.standard.string(forKey: "DateFormat") ?? "MM/dd"
     
-    private var dateFormats: [String] = [
-        "MM/dd",
-        "MM/dd/yyyy",
-        "MMM dd",
-        "MMM dd yyyy",
-        
-        "dd/MM",
-        "dd/MM/yyyy",
-        "dd MMM",
-        "dd MMM yyyy",
-        
-        "EEE, MMM dd",
-        "EEEE"
-    ]
-    
-    private var dateFormattingExamples: [String: String] = [
-        "MM/dd": "03/20",
-        "MM/dd/yyyy": "03/20/2023",
-        "MMM dd": "Mar 20",
-        "MMM dd yyyy": "Mar 20 2023",
-        
-        "dd/MM": "20/03",
-        "dd/MM/yyyy": "20/03/2023",
-        "dd MMM": "20 Mar",
-        "dd MMM yyyy": "20 Mar 2023",
-        
-        "EEE, MMM dd": "Mon, Mar 20",
-        "EEEE": "Monday"
-    ]
-    
     //@State private var timeAs24: Bool = UserDefaults.standard.bool(forKey: "Time24Hour")
     
     @ObservedObject var backgroundController = BackgroundFileUpdaterController.shared
@@ -89,9 +59,9 @@ struct ContentView: View {
                 
                 // MARK: Configuration
                 // MARK: 24-Hour Time
-                //            Toggle("24 Hour Time", isOn: $timeAs24).onChange(of: timeAs24) { new in
-                //                UserDefaults.standard.set(new, forKey: "Time24Hour")
-                //            }
+                //Toggle("24 Hour Time", isOn: $timeAs24).onChange(of: timeAs24) { new in
+                //    UserDefaults.standard.set(new, forKey: "Time24Hour")
+                //}
                 
                 // MARK: Seconds
                 Toggle("Seconds", isOn: $timeTextEnabled).onChange(of: timeTextEnabled) { new in
@@ -133,13 +103,35 @@ struct ContentView: View {
                         .bold()
                     Spacer()
                     Button(action: {
-                        showDateFormatPopup()
+                        showDateFormatAlert()
                     }) {
                         Text(dateFormat)
                             .foregroundColor(.blue)
                     }
                 }
                 .padding(10)
+                
+                Text("""
+\"e\": numeric day of week
+\"E\"-\"EEE\": short day of week
+\"EEEE\": long day of week
+
+\"d\": day of month, without leading zero
+\"dd\": day of month, with leading zero
+
+\"M\": numeric month, without leading zero
+\"MM\": numeric month, with leading zero
+\"MMM\": short month
+\"MMMM\": long month
+
+\"yy\": two-digit year
+\"y\"/\"yyyy\": four-digit year
+""")
+                .font(.footnote)
+                .foregroundColor(.secondary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
             }
             .padding()
             
@@ -168,40 +160,32 @@ struct ContentView: View {
         }
     }
     
-    func showDateFormatPopup() {
-        // create and configure alert controller
-        let alert = UIAlertController(title: "Choose a date format", message: "", preferredStyle: .actionSheet)
+    func showDateFormatAlert() {
+        let alert = UIAlertController(title: "Input a date format", message: nil, preferredStyle: .alert)
         
-        // create the actions
-        for f in dateFormats {
-            let newAction = UIAlertAction(title: "\(f) (\(dateFormattingExamples[f] ?? "Error"))", style: .default) { (action) in
-                // apply the format
-                UserDefaults.standard.set(f, forKey: "DateFormat")
-                dateFormat = f
-                if crumbTextEnabled {
-                    setCrumbDate()
-                }
-            }
-            if dateFormat == f {
-                // add a check mark
-                newAction.setValue(true, forKey: "checked")
-            }
-            alert.addAction(newAction)
+        alert.addTextField { (textField) in
+            textField.text = dateFormat
+            textField.placeholder = dateFormat
         }
         
-        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { (action) in
-            // cancels the action
-        }
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] _ in
+            guard let textField = alert?.textFields?.first,
+                  let newDateFormat = textField.text,
+                  !newDateFormat.trimmingCharacters(in: .whitespaces).isEmpty
+            else {
+                return
+            }
+            
+            dateFormat = newDateFormat.trimmingCharacters(in: .whitespaces)
+            UserDefaults.standard.set(dateFormat, forKey: "DateFormat")
+            
+            if crumbTextEnabled {
+                setCrumbDate()
+            }
+        }))
         
-        // add the actions
-        alert.addAction(cancelAction)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
-        let view: UIView = UIApplication.shared.windows.first!.rootViewController!.view
-        // present popover for iPads
-        alert.popoverPresentationController?.sourceView = view // prevents crashing on iPads
-        alert.popoverPresentationController?.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.maxY, width: 0, height: 0) // show up at center bottom on iPads
-        
-        // present the alert
         UIApplication.shared.windows.first?.rootViewController?.present(alert, animated: true)
     }
 }
