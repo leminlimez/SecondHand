@@ -112,20 +112,20 @@ struct ContentView: View {
                 .padding(10)
                 
                 Text("""
-\"e\": numeric day of week
-\"E\"-\"EEE\": short day of week
-\"EEEE\": long day of week
+"e": numeric day of week
+"E"-"EEE": short day of week
+"EEEE": long day of week
 
-\"d\": day of month, without leading zero
-\"dd\": day of month, with leading zero
+"d": day of month, without leading zero
+"dd": day of month, with leading zero
 
-\"M\": numeric month, without leading zero
-\"MM\": numeric month, with leading zero
-\"MMM\": short month
-\"MMMM\": long month
+"M": numeric month, without leading zero
+"MM": numeric month, with leading zero
+"MMM": short month
+"MMMM": long month
 
-\"yy\": two-digit year
-\"y\"/\"yyyy\": four-digit year
+"yy": two-digit year
+"y"/"yyyy": four-digit year
 """)
                 .font(.footnote)
                 .foregroundColor(.secondary)
